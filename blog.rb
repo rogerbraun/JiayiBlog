@@ -33,6 +33,6 @@ end
 
 get "/post/:id" do
 
-  @post = Post.get(params)
+  @post = Post.get(params[:id])
   haml :show_post
 end
