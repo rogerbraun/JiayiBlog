@@ -15,7 +15,7 @@ class Post
   property :body, Text
 end
 
-Post.auto_migrate!
+Post.auto_upgrade!
 
 get "/" do
   @posts = Post.all(:order => [:created_at.desc])
