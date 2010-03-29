@@ -18,7 +18,7 @@ end
 Post.auto_migrate!
 
 get "/" do
-  @posts = Post.all(:order => :created_at.desc)
+  @posts = Post.all(:order => [:created_at.desc])
   haml :index
 end
 
