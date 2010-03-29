@@ -1,0 +1,7 @@
+%h1 Neuen Post schreiben
+%form{:method => "post", :action => "/post/new"}
+  %label{:for => "title"} Überschrift
+  %input{:name => "title"}
+  %br
+  %textarea{:name => "body"}
+  %button Abschicken
