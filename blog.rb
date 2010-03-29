@@ -30,3 +30,9 @@ post "/post/new" do
   Post.create(params)
   redirect "/"
 end
+
+get "/post/:id" do
+
+  @post = Post.get(params)
+  haml :show_post
+end
