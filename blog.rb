@@ -32,7 +32,10 @@ post "/post/new" do
 end
 
 get "/post/:id" do
-
   @post = Post.get(params[:id])
-  haml :show_post
+  if @post then
+    haml :show_post
+  else
+    redirect "/"
+  end
 end
